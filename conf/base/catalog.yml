@@ -1,0 +1,19 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+dataloader:
+  type: pickle.PickleDataSet
+  backend: cloudpickle
+  filepath: data/05_model_input/dataloader.cpkl
+
+model:
+  type: pickle.PickleDataSet
+  backend: cloudpickle
+  filepath: data/05_model_input/model.cpkl
+
+trained_model:
+  type: pickle.PickleDataSet
+  backend: cloudpickle
+  filepath: data/06_models/trained_model.cpkl
