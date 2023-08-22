@@ -49,7 +49,7 @@ def build_model():
     return autoencoder
 
 def train_model(model, dataloader, devices):
-    trainer = pl.Trainer(limit_train_batches=100, max_epochs=2, accelerator="gpu", devices=devices)
+    trainer = pl.Trainer(limit_train_batches=100, max_epochs=2, accelerator="gpu", strategy="ddp", devices=devices)
     trainer.fit(model=model, train_dataloaders=dataloader)
 
     return model
