@@ -15,6 +15,6 @@ pytest~=7.2
 kedro
 kedro-viz
 kedro-datasets
-pytorch
+torch
 torchvision
 lightning
